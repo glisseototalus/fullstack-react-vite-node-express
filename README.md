@@ -13,17 +13,28 @@ cd client && npm install
 cd ../server && npm install
 ```
 
+
 ### 2. Development
 
-Run frontend and backend separately for development:
+You can run both frontend and backend in development mode with a single command from the root:
 
-**Frontend (Vite + React):**
+```
+npm run dev
+```
+
+This uses [concurrently](https://www.npmjs.com/package/concurrently) to start both:
+- Frontend (Vite + React) at [http://localhost:5173](http://localhost:5173)
+- Backend/API (Node + Express) at [http://localhost:3001](http://localhost:3001)
+
+Or, you can run them separately as before:
+
+**Frontend (Vite + React) only:**
 ```
 cd client
 npm run dev
 ```
 
-**Backend (Node + Express):**
+**Backend (Node + Express) only:**
 ```
 cd server
 npm run dev
